@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="grid grid--three">
+        {% for post in posts %}
+            <div class="column">
+                <div class="card card--dark" style="width: 320px">
+                    <div class="card__body">
+                        <img  src="{{post.featured_image.url}}" />
+                        <h3>{{post.title}}</h3>
+                        <p>{{post.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+
+        {%endfor%}
+    </div>
+{%endblock content%}
